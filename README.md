@@ -7,3 +7,5 @@ The are several csv files prsent in a set of nested directories and we want them
 --> extract directory structure of the destination path (remove the filename from destination path)
 --> Create the destination path if it does not exist
 --> Copy file from source to destination
+
+Output of the script is written into a logfile.
