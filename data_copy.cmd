@@ -25,15 +25,15 @@ for /f "usebackq delims=" %%A in ("%list_files%") do (
     :: create path "dirPath" if it does not exist
     if not exist !dirPath! mkdir !dirPath!
     :: write value of "dirPath" into logfile
-    echo Directory path: !dirPath! >> %logFile%
+    echo Directory path: !dirPath! >> %logFile% 2>&1
     :: write value of "dirPath" into logfile
-    echo Source: !source! >> %logFile%
+    echo Source: !source! >> %logFile% 2>&1
     :: write value of "source" into logfile
-    echo Destination: !destination! >> %logFile%
+    echo Destination: !destination! >> %logFile% 2>&1
     :: write value of "destination" into logfile
-    scp !source! !destination! >> %logFile%
+    scp !source! !destination! >> %logFile% 2>&1
     :: write into logfile
-    echo ====================  >> %logFile%
+    echo ====================  >> %logFile% 2>&1
 )
 
 :: end the setlocal block and restore previous environment settings
